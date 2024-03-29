@@ -12,39 +12,141 @@
       import { disableKeysAndActions } from "../Components/DisableKeysAndActions.js";
       disableKeysAndActions();
     </script>
+
+    <!-- button script main page-->
+    <link
+      rel="stylesheet"
+      href="./CSS/buttons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c766ab3433.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <div>Hello</div>
-    <!-- </br> adds a line break
-  <hr/> divide the content that i snot related -->
-
-    <p>Paragraph</p>
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-    </ul>
-    <ol>
-      <li>Item 1</li>
-      <li>
-        Item 2
-        <ul>
-          <li>Item 1</li>
-          <li draggable="true">Item 2</li>
-        </ul>
-      </li>
-    </ol>
-
-    <a href="https://www.google.com">Google</a>
-    <a href="./Pages/MyCV.html"> >About me</a>
-    <a
-      href="contact.html"
-      draggable="true"
-      >Contact</a
+    <button
+      class="green"
+      href="#"
     >
-    <img
-      src="https://via.placeholder.com/150"
-      alt="Placeholder"
-    />
+      <i class="fa-solid fa-radiation"></i>
+    </button>
+    <button
+      class="blue"
+      href="#"
+    >
+      <i class="fa-solid fa-fingerprint"></i>
+    </button>
+    <button
+      class="purple"
+      href="#"
+    >
+      <i class="fa-solid fa-biohazard"></i>
+    </button>
+    <button
+      class="pink"
+      href="#"
+    >
+      <i class="fa-solid fa-bomb"></i>
+    </button>
+    <button
+      class="maroon"
+      href="#"
+    >
+      <i class="fa-regular fa-face-grin-wink"></i>
+    </button>
+    <button
+      class="teal"
+      href="#"
+    >
+      <i class="fa-solid fa-pepper-hot"></i>
+    </button>
+
+    <!-- i want a line with the following links to the top of my page: About, Portofolio, Private Projects, Contact and icons with link to my linkedin and github pages. please add them centred  -->
+    <div
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: #f1f1f1;
+        color: black;
+        width: 100%;
+        text-align: center;
+      "
+    >
+      <a
+        href="#"
+        style="padding-right: 10px"
+      >
+        About
+      </a>
+      <a
+        href="#"
+        style="padding-right: 10px"
+      >
+        Portofolio
+      </a>
+      <a
+        href="#"
+        style="padding-right: 10px"
+      >
+        Private Projects
+      </a>
+      <a
+        href="#"
+        style="padding-right: 10px"
+      >
+        Contact
+      </a>
+      <a
+        href="https://www.linkedin.com/in/arvatu"
+        style="padding-right: 10px"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/darvatu"
+        style="padding-right: 10px"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div
+      id="footer"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        background-color: #f1f1f1;
+        color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      "
+    >
+      <p id="copyright-notice"></p>
+      <p id="construction-notice"></p>
+      <p>
+        <a
+          id="cv-link"
+          href="#"
+          >My CV</a
+        >
+      </p>
+    </div>
+
+    <script>
+      document.getElementById(
+        "construction-notice"
+      ).textContent = `Site under construction, last change ${new Date().toLocaleString()}`;
+      document.getElementById(
+        "copyright-notice"
+      ).textContent = `© ${new Date().getFullYear()} Daniel Arvatu`;
+      document.getElementById("cv-link").href = "./Pages/MyCV.html";
+    </script>
   </body>
 </html>
