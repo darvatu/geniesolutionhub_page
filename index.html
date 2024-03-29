@@ -25,8 +25,6 @@
   </head>
 
   <body>
-    <div>Page under construction...</div>
-
     <button
       class="green"
       href="#"
@@ -63,34 +61,6 @@
     >
       <i class="fa-solid fa-pepper-hot"></i>
     </button>
-    <!-- need to add my cv link to the bottom right of the page -->
-    <a
-      href="./Pages/MyCV.html"
-      style="
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        padding: 10px;
-        background-color: #f1f1f1;
-        color: black;
-        text-decoration: none;
-      "
-    >
-      My CV
-    </a>
-    <!-- i need to add to the bottom left the copyright text for 2024 and my name -->
-    <div
-      style="
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-        background-color: #f1f1f1;
-        color: black;
-      "
-    >
-      &copy; 2024 Genie
-    </div>
 
     <!-- i want a line with the following links to the top of my page: About, Portofolio, Private Projects, Contact and icons with link to my linkedin and github pages. please add them centred  -->
     <div
@@ -142,5 +112,41 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
+
+    <div
+      id="footer"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        background-color: #f1f1f1;
+        color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      "
+    >
+      <p id="copyright-notice"></p>
+      <p id="construction-notice"></p>
+      <p>
+        <a
+          id="cv-link"
+          href="#"
+          >My CV</a
+        >
+      </p>
+    </div>
+
+    <script>
+      document.getElementById(
+        "construction-notice"
+      ).textContent = `Site under construction, last change ${new Date().toLocaleString()}`;
+      document.getElementById(
+        "copyright-notice"
+      ).textContent = `© ${new Date().getFullYear()} Daniel Arvatu`;
+      document.getElementById("cv-link").href = "./Pages/MyCV.html";
+    </script>
   </body>
 </html>
