@@ -4,81 +4,16 @@
     <meta charset="UTF-8" />
     <title>Genie</title>
 
-    <script>
-      // Function to prevent default keyboard behavior
-      function preventDefaultKeys(event) {
-        // List of keys to disable
-        const disabledKeys = [
-          "F1",
-          "F2",
-          "F3",
-          "F4",
-          "F5",
-          "F6",
-          "F7",
-          "F8",
-          "F9",
-          "F10",
-          "F11",
-          "F12", // Function keys
-          "Alt",
-          "Control",
-          "Shift", // Modifier keys
-          "CapsLock", // Caps Lock
-        ];
-
-        // Check if pressed key is in the disabledKeys list
-        if (disabledKeys.includes(event.key)) {
-          event.preventDefault();
-        }
-      }
-
-      // Attach event listener for keydown event to prevent default keyboard behavior
-      document.addEventListener("keydown", preventDefaultKeys);
-
-      // Prevent right-click context menu
-      document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-      });
-
-      // Prevent text selection
-      document.addEventListener("selectstart", function (e) {
-        e.preventDefault();
-      });
-
-      // Prevent dragging and dropping
-      document.addEventListener("dragstart", function (e) {
-        e.preventDefault();
-      });
-
-      // Disable text selection
-      document.body.style.userSelect = "none";
-
-      // Prevent keyboard shortcuts
-      document.addEventListener("keydown", function (e) {
-        // Prevent Ctrl+A (select all)
-        if (e.ctrlKey && e.key === "a") {
-          e.preventDefault();
-        }
-        // Prevent Ctrl+C (copy)
-        if (e.ctrlKey && e.key === "c") {
-          e.preventDefault();
-        }
-        // Prevent Ctrl+X (cut)
-        if (e.ctrlKey && e.key === "x") {
-          e.preventDefault();
-        }
-        // Prevent Ctrl+V (paste)
-        if (e.ctrlKey && e.key === "v") {
-          e.preventDefault();
-        }
-        // Prevent Ctrl+U (view source)
-        if (e.ctrlKey && e.key === "u") {
-          e.preventDefault();
-        }
-      });
+    <!-- Import the DisableKeysAndActions component -->
+    <script
+      type="module"
+      defer
+    >
+      import { disableKeysAndActions } from "../Components/DisableKeysAndActions.js";
+      disableKeysAndActions();
     </script>
   </head>
+
   <body>
     <div>Hello</div>
     <!-- </br> adds a line break
