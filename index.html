@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Genie</title>
 
+    <script>
+      // Prevent right-click context menu
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      // Prevent text selection
+      document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+      });
+
+      // Prevent dragging and dropping
+      document.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+      });
+
+      // Disable text selection
+      document.body.style.userSelect = "none";
+
+      // Prevent keyboard shortcuts
+      document.addEventListener("keydown", function (e) {
+        // Prevent Ctrl+A (select all)
+        if (e.ctrlKey && e.key === "a") {
+          e.preventDefault();
+        }
+        // Prevent Ctrl+C (copy)
+        if (e.ctrlKey && e.key === "c") {
+          e.preventDefault();
+        }
+        // Prevent Ctrl+X (cut)
+        if (e.ctrlKey && e.key === "x") {
+          e.preventDefault();
+        }
+        // Prevent Ctrl+V (paste)
+        if (e.ctrlKey && e.key === "v") {
+          e.preventDefault();
+        }
+        // Prevent Ctrl+U (view source)
+        if (e.ctrlKey && e.key === "u") {
+          e.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div>Hello</div>
+    <!-- </br> adds a line break
+  <hr/> divide the content that i snot related -->
+
+    <p>Paragraph</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <ol>
+      <li>Item 1</li>
+      <li>
+        Item 2
+        <ul>
+          <li>Item 1</li>
+          <li draggable="true">Item 2</li>
+        </ul>
+      </li>
+    </ol>
+
+    <a href="https://www.google.com">Google</a>
+    <a href="about.html">About</a>
+    <a
+      href="contact.html"
+      draggable="true"
+      >Contact</a
+    >
+    <img
+      src="https://via.placeholder.com/150"
+      alt="Placeholder"
+    />
+  </body>
+</html>
