@@ -5,6 +5,37 @@
     <title>Genie</title>
 
     <script>
+      // Function to prevent default keyboard behavior
+      function preventDefaultKeys(event) {
+        // List of keys to disable
+        const disabledKeys = [
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5",
+          "F6",
+          "F7",
+          "F8",
+          "F9",
+          "F10",
+          "F11",
+          "F12", // Function keys
+          "Alt",
+          "Control",
+          "Shift", // Modifier keys
+          "CapsLock", // Caps Lock
+        ];
+
+        // Check if pressed key is in the disabledKeys list
+        if (disabledKeys.includes(event.key)) {
+          event.preventDefault();
+        }
+      }
+
+      // Attach event listener for keydown event to prevent default keyboard behavior
+      document.addEventListener("keydown", preventDefaultKeys);
+
       // Prevent right-click context menu
       document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
