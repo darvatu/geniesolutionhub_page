@@ -60,7 +60,6 @@ body {
   border: none;
   outline: none;
   border-radius: 20px;
-  /* need font size to resize with the image */
   font-size: 10vmin;
   font-family: "Arial", sans-serif;
   color: black;
