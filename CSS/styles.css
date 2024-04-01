@@ -60,6 +60,8 @@ body {
   box-shadow: 10px 10px 15px #868686;
   font-size: 410%;
   transition: 0.25s;
+  border: 2px solid goldenrod;
+  box-shadow: 10px 10px 15px rgb(190, 163, 93);
 }
 
 .button:hover {
