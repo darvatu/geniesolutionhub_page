@@ -25,17 +25,20 @@
   font-family: "Arial", sans-serif;
   font-size: 100%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 #header {
   top: 0;
   border-bottom: 1px solid black;
+  z-index: 3;
 }
 
 #footer {
   bottom: 0;
   justify-content: space-around;
   border-top: 1px solid black;
+  z-index: 2;
 }
 
 #header a,
@@ -57,24 +60,27 @@ body {
   border: none;
   outline: none;
   border-radius: 20px;
-  /* box-shadow: 10px 10px 15px #868686; */
-  font-size: 410%;
+  /* need font size to resize with the image */
+  font-size: 10vmin;
+  font-family: "Arial", sans-serif;
+  color: black;
+  cursor: pointer;
+
   transition: 0.25s;
-  border: 1px solid goldenrod;
+  border: 0.1px solid goldenrod;
   box-shadow: 0px 0px 3px rgb(190, 163, 93);
 }
 
 .button:hover {
-  /* box-shadow: 10px 10px 6px #868686; */
   box-shadow: 3px 10px 30px rgb(190, 163, 93);
   height: 31%;
   width: 21%;
-  font-size: 500%;
+  font-size: 11vmin;
 }
 
 .button:active {
   box-shadow: 3px 10px 10px rgb(124, 108, 68);
-  font-size: 410%;
+  font-size: 7vmin;
   height: 20%;
   width: 10%;
 }
