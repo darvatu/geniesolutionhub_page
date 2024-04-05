@@ -1,0 +1,24 @@
+{
+  "name": "geniesolutionhub_page",
+  "version": "1.0.0",
+  "description": "https://darvatu.github.io/geniesolutionhub_page/",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darvatu/geniesolutionhub_page.git"
+  },
+  "author": "Daniel Arvatu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darvatu/geniesolutionhub_page/issues"
+  },
+  "homepage": "https://github.com/darvatu/geniesolutionhub_page#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
