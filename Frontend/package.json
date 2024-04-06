@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/darvatu/geniesolutionhub_page#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }
